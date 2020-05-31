@@ -229,12 +229,47 @@ main{
         height:560px;
     }
 
+    #main_content{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    height: 90%;
+    justify-content: center;
+    width: 100%;
+    }
+
+    #sh_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Chelsea Market', cursive;
+    width: 100%;
+    /* background-color: pink; */
+    height: 100%;
+    border: 2px solid #e3e3e3;
+    overflow-y: scroll;
+    }
+
     #s_inp{
         width: 80%;
         margin-left: 10px;
     }
 
+    .sh_info_item{
+    margin-top: 5px;
+    padding: 5px;
+    width: 323px;
+    font-size: 21px;
+    box-shadow: 6px 7px 13px 0px #888888;
+    word-wrap: break-word;
+    }
+
     #logoimg{
         margin-left: 10px;
+    }
+
+    #search_results{
+        width:231px;
     }
   }
