@@ -111,6 +111,7 @@ main{
 
 
 .result_div{
+    background-color: white;
     padding-left: 5px;
     font-family: sans-serif;
     display: flex;
