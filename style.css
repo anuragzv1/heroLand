@@ -238,6 +238,10 @@ main{
     width: 100%;
     }
 
+    #sh_image{
+        width: 100%;
+    }
+
     #sh_info{
     display: flex;
     justify-content: center;
