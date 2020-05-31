@@ -226,7 +226,7 @@ main{
 
 @media screen and (max-width: 720px) {
     .search_section{
-        height:450px;
+        height:550px;
     }
 
     #s_inp{
