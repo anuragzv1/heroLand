@@ -224,3 +224,17 @@ main{
 }
 
 
+@media screen and (max-width: 720px) {
+    .search_section{
+        height:450px;
+    }
+
+    #s_inp{
+        width: 80%;
+        margin-left: 10px;
+    }
+
+    #logoimg{
+        margin-left: 10px;
+    }
+  }
