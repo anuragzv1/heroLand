@@ -15,16 +15,20 @@ main{
     justify-content: center;
 }
 .navbar{
+    background-color: white;
     height: 7vh;
     /* background-color: #e3e3e3; */
     display: flex;
     align-items: center;
     border-bottom: 1px solid #e3e3e3;
 
+
 }
 
 .navbar ul{
     margin:0;
+    padding-left: 10px;
+
 }
 
 .navbar ul li{
@@ -52,9 +56,10 @@ main{
     position: absolute;
     height: 200px;
     overflow-y: scroll;
-    left: 187px;
+    left: 136px;
     width: 291px;
     margin-top: -1px;
+    z-index:1;
 
 }
 .footer{
@@ -72,7 +77,7 @@ main{
 }
 
 #logoimg{
-    width: 40vw;
+    width: 570px;
 }
 
 #s_inp{
@@ -89,6 +94,11 @@ main{
     border-right: 0;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+#search_input{
+    position: relative;
+    width: 600px;
 }
 
 #search_btn{
@@ -197,6 +207,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 #fav_content{
@@ -204,29 +215,43 @@ main{
     
 }
 
+#favlist{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 #favlist a{
     text-decoration: none;
+    color: white;
 }
 #favlist a:hover{
     color: red;
 }
 
 #fav_main_ul li{
+    box-shadow: 4px 6px 7px -2px #0d202f;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #0d202f;
     margin: 5px;
     font-size: 20px;
     text-decoration: none;
     list-style:none;
     font-family: 'Chelsea Market', cursive;
-    width: auto;
+    width: 300px;
     height: 50px;
     line-height: 50px;
     vertical-align: center;
 }
-
+#fav_main_ul li button{
+float: right;
+margin-top:15px
+}
 
 @media screen and (max-width: 720px) {
     .search_section{
-        height:560px;
+        height:94vh;
         width: 100%;
     }
 
@@ -257,7 +282,7 @@ main{
     }
 
     #s_inp{
-        width: 80%;
+        width: 100%;;
         margin-left: 10px;
     }
 
@@ -272,11 +297,13 @@ main{
 
     #logoimg{
         margin-left: 10px;
+        width: 90%;
     }
 
     #search_results{
-        left:15px;
-        width:231px;
+        left:145px;
+        width:291px;
+        z-index: 1;
     }
 
     #favs_main{
@@ -284,6 +311,11 @@ main{
     }
 
     #fav_main_ul li{
-        width: 300px;
+        width: 270px;
+        font-size: 17px;
+    }
+
+    #search_input{
+        width:600px;
     }
   }

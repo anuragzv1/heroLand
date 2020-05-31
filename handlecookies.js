@@ -6,7 +6,9 @@ if(localStorage.length==0){
     var favdiv = document.getElementById("fav_content");
     var no_cookies = document.createElement("div");
     no_cookies.innerHTML = "Seems like you dont have any favourites yet! <br> redirecting you to homepage....";
-
+    no_cookies.style.color="#e3e3e3";
+    no_cookies.style.padding="7px";
+    no_cookies.style.border= "1.5px solid gray";
     setTimeout(() => {
         window.location.href="index.html";
     }, 3000);
