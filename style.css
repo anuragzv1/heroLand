@@ -227,6 +227,7 @@ main{
 @media screen and (max-width: 720px) {
     .search_section{
         height:560px;
+        width: 100%;
     }
 
     #main_content{
@@ -274,6 +275,15 @@ main{
     }
 
     #search_results{
+        left:15px;
         width:231px;
+    }
+
+    #favs_main{
+        text-align: center;
+    }
+
+    #fav_main_ul li{
+        width: 300px;
     }
   }
