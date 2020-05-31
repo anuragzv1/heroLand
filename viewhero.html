@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src = "beforeLoad.js"></script>
-        <script>
-            var id = window.location.href;
-            console.log(id);
-            var title ="";
-            var i = id.length;
-            for(;i>=0;i--){
-                if(id.charAt(i)=='#')break;
-                title= id.charAt(i)+title;
-            }
-            i--;
-            var id_num = "";
-            for(;i>=0;i--){
-                if(id.charAt(i)=='#')break;
-                id_num = id.charAt(i)+id_num;
-            }
-            console.log(id_num);
-            document.write("<title>"+title+"</title>");
-        </script>
-        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
-        <link rel = "stylesheet" href = "style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
+<head>
+    <script src="beforeLoad.js"></script>
+    <script>
+        //since this html page recieves parameters from index.html as # , i run 2 loops to get the id and name of hero
+        var id = window.location.href;
+        console.log(id);
+        var title = "";
+        var i = id.length;
+        for (; i >= 0; i--) {
+            if (id.charAt(i) == '#') break;
+            title = id.charAt(i) + title;
+        }
+        i--;
+        var id_num = "";
+        for (; i >= 0; i--) {
+            if (id.charAt(i) == '#') break;
+            id_num = id.charAt(i) + id_num;
+        }
+        console.log(id_num);
+        //dynamic title
+        document.write("<title>" + title + "</title>");
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
 
 
-    <body>
-        <div class = "navbar">
-            <ul>
-               <li onclick="window.location.href='index.html'">HOME </li> 
-               <li onclick="window.location.href='favourites.html'">FAVOURITES</li>
-            </ul>
-        </div>
+<body>
+    <div class="navbar">
+        <ul>
+            <li onclick="window.location.href='index.html'">HOME </li>
+            <li onclick="window.location.href='favourites.html'">FAVOURITES</li>
+        </ul>
+    </div>
 
-        <div id = "smallLogo">
-            <center><img id = "smalllogoimage" src = "images/logo.png" width="200px" heigh = "80px"></center>
-        </div>
+    <div id="smallLogo">
+        <center><img id="smalllogoimage" src="images/logo.png" width="200px" heigh="80px"></center>
+    </div>
 
-        <div id= "main_content">
-            <div id = "sh_info">
-                <div class ="sh_info_item">Name : <span id ="name_hero"></span><br></div>
-                <br>
-                <div class ="sh_info_item">ID: <span id ="id_hero"></span><br></div>
-                <br>
-                <div class ="sh_info_item">Powerstats :
-                    <ul id = "powerstats">
-    
-                    </ul>
-                </div>
-                <br>
-                <div class ="sh_info_item">
-                    Biography:<br>
-                    <ul id="biography">
-    
-                    </ul>
-                    <br>
-                </div>
-                
+    <div id="main_content">
+        <div id="sh_info">
+            <div class="sh_info_item">Name : <span id="name_hero"></span><br></div>
+            <br>
+            <div class="sh_info_item">ID: <span id="id_hero"></span><br></div>
+            <br>
+            <div class="sh_info_item">Powerstats :
+                <ul id="powerstats">
+
+                </ul>
             </div>
-            <div id ="sh_image">
-                <img id ="photo_hero" widht="300px" height="400px">
-                <div id = "favbtn">
-                    <button id ="lovethis" onClick =addToCookies();>love it <i class="fa fa-heart" aria-hidden="true"></i>
-                    </button>
-                    <br><br>
-                </div>
+            <br>
+            <div class="sh_info_item">
+                Biography:<br>
+                <ul id="biography">
+
+                </ul>
+                <br>
             </div>
 
-            
         </div>
+        <div id="sh_image">
+            <img id="photo_hero" widht="300px" height="400px">
+            <div id="favbtn">
+                <button id="lovethis" onClick=addToCookies();>love it <i class="fa fa-heart" aria-hidden="true"></i>
+                </button>
+                <br><br>
+            </div>
+        </div>
+    </div>
 
-        
 
-        <script>
-            var id = window.location.href;
-            var title ="";
-            var i = id.length;
-            for(;i>=0;i--){
-                if(id.charAt(i)=='#')break;
-                title= id.charAt(i)+title;
-            }
-            i--;
-            var id_num = "";
-            for(;i>=0;i--){
-                if(id.charAt(i)=='#')break;
-                id_num = id.charAt(i)+id_num;
-            }
-            console.log(id_num);
-            fillAllData(id_num);
-        </script>
-    </body>
+
+    <script>
+        var id = window.location.href;
+        var title = "";
+        var i = id.length;
+        for (; i >= 0; i--) {
+            if (id.charAt(i) == '#') break;
+            title = id.charAt(i) + title;
+        }
+        i--;
+        var id_num = "";
+        for (; i >= 0; i--) {
+            if (id.charAt(i) == '#') break;
+            id_num = id.charAt(i) + id_num;
+        }
+        console.log(id_num);
+        //function to fill the html page with data
+        fillAllData(id_num);
+    </script>
+</body>
 
 </html>

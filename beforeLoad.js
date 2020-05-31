@@ -1,5 +1,7 @@
-var GHO;
+var GHO;   //global object that holds everything about the current superhero!
 
+
+//when this function is called the viewhero.html page is filled with the required data
 function fillAllData(id){
 
     xmlHttp = new XMLHttpRequest();
@@ -10,18 +12,19 @@ function fillAllData(id){
             GHO = returndata;
             console.log( GHO );
 
+            //setting image
             var image  = document.getElementById("photo_hero");
             image.src = GHO.image.url;
-
+            //setting name
             var name_div = document.getElementById("name_hero");
             name_div.innerText = GHO.name;
+
+            //setting id
             var id_div = document.getElementById("id_hero");
             id_div.innerText = GHO.id;
 
+            //setting powerstats using for i loop in result.powerstats
             var ps_list = document.getElementById("powerstats");
-
-            
-
             for(let i in GHO.powerstats){
                 var li = document.createElement("li");
                 li.innerText = i+ ":"+GHO.powerstats[i];
@@ -29,6 +32,7 @@ function fillAllData(id){
                 
             }
 
+            //setting biography
             var bio_list = document.getElementById("biography");
 
             for(let i in GHO.biography){
@@ -37,8 +41,6 @@ function fillAllData(id){
                 bio_list.appendChild(li);
             }
 
-
-            
         }
     }
 
@@ -47,6 +49,8 @@ function fillAllData(id){
     xmlHttp.send();
 }
 
+
+//this function takes the id of whatever superhero page is open and adds it to the localStorage array
 
 function addToCookies(){
     console.log(localStorage);
