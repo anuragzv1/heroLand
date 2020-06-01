@@ -21,10 +21,7 @@ input_field.addEventListener('keyup', function (e) {
             document.getElementById("search_results").style.boxShadow = "0";
 
             //delete divs
-            var old_results = document.getElementsByClassName("result_div");
-            for (let i = 0; i < old_results.length; i++) {
-                old_results[i].parentNode.removeChild(old_results[i]);
-            }
+            document.getElementById("search_results").innerHTML = "";
         }
         else {
 
@@ -32,14 +29,8 @@ input_field.addEventListener('keyup', function (e) {
             document.getElementById("search_results").style.display = "block";
             document.getElementById("search_results").style.boxShadow = " 3px 7px 11px 3px #888888";
 
-            //iterate over elements with class result_div and delete them
+            //remove old data
                 document.getElementById("search_results").innerHTML = "";
-
-            
-//             var old_results = document.getElementsByClassName("result_div");
-//             for (let i = 0; i < old_results.length; i++) {
-//                 old_results[i].parentNode.removeChild(old_results[i]);
-//             }
             //create XMLhttp object
             var xmlHttp = new XMLHttpRequest();
 
