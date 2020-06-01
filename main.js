@@ -29,8 +29,7 @@ input_field.addEventListener('keyup', function (e) {
             document.getElementById("search_results").style.display = "block";
             document.getElementById("search_results").style.boxShadow = " 3px 7px 11px 3px #888888";
 
-            //remove old data
-                document.getElementById("search_results").innerHTML = "";
+            
             //create XMLhttp object
             var xmlHttp = new XMLHttpRequest();
 
@@ -39,7 +38,10 @@ input_field.addEventListener('keyup', function (e) {
                 if (this.status == 200 && this.readyState == 4) {
                     var result = JSON.parse(this.response);
                     if (result.response == "success") {
+                        //remove old data
+                        document.getElementById("search_results").innerHTML = "";
                         //result.results.reverse();
+                        console.log("returned length"+result.results.length);
                         for (var i = 0; i < result.results.length; i++) {
                             var nameOfHero = result.results[i].name;
                             var id = result.results[i].id;
@@ -50,7 +52,7 @@ input_field.addEventListener('keyup', function (e) {
                             var ele = " <a target='_BLANK' href = viewhero.html#" + id + "#" + nameOfHero + ">" + nameOfHero + "</a>";
                             new_div.innerHTML = ele;
                             var parentOfThese = document.getElementById("search_results");
-                            parentOfThese.insertBefore(new_div, parentOfThese.childNodes[0]);
+                            //parentOfThese.insertBefore(new_div, parentOfThese.childNodes[0]);
                             parentOfThese.appendChild(new_div);
 
                         }
