@@ -37,7 +37,6 @@ input_field.addEventListener('keyup', function (e) {
             for (let i = 0; i < old_results.length; i++) {
                 old_results[i].parentNode.removeChild(old_results[i]);
             }
-            setTimeout(function () { }, 500);
             //create XMLhttp object
             var xmlHttp = new XMLHttpRequest();
 
