@@ -16,7 +16,7 @@ input_field.addEventListener('keyup', function (e) {
         console.log("input field length==" + input_field.value.length);
 
         //if input length zero clear the div
-        if (input_field.value.length == 0) {
+        if (input_field.value.length <3) {
             document.getElementById("search_results").style.display = "none";
             document.getElementById("search_results").style.boxShadow = "0";
 
