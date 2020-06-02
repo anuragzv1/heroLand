@@ -54,12 +54,14 @@ main{
 
 #search_results{
     position: absolute;
-    height: 200px;
+    max-height: 200px;
     overflow-y: scroll;
+    overflow-x: hidden;
     left: 136px;
     width: 291px;
     margin-top: -1px;
-    z-index:1;
+    z-index: 1;
+    background-color:white;
 
 }
 .footer{
